@@ -1,7 +1,6 @@
 <template id="classify">
   <div >
     <van-nav-bar @click-left="onClickLeft" fixed title="精品优选"  left-arrow id="navheader">
-      <van-icon name="search" slot="right" />
     </van-nav-bar>
     <div id='list-cart'>
     <div id="cartBox">

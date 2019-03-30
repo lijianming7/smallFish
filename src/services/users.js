@@ -18,7 +18,7 @@ export function addToshopCart(product,quantity) {
     quantity
   }, {
     headers: {
-      authorization: 'bearer ' + sessionStorage.getItem('Admin-Token')
+      authorization: 'bearer ' + sessionStorage.getItem('token')
     }
   })
 }

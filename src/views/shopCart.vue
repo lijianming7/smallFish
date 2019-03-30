@@ -1,8 +1,9 @@
 <template>
   <div>
-    <van-nav-bar @click-left="onClickLeft" title="购物车" left-arrow>
-      <van-icon name="edit" slot="right" />
+    <van-nav-bar fixed @click-left="onClickLeft" title="购物车" left-arrow>
+      <van-icon  slot="right" />
     </van-nav-bar>
+ <div class="cart-section" v-if="goods!=0">
     <van-checkbox-group class="card-goods" v-model="checkedGoods" >
       <!-- 复选框组 -->
       <van-checkbox checked-color="#c18347"
@@ -15,14 +16,16 @@
           v-if="item.product"
           :title="item.product.name"
           :desc="item.product.description"
-          :num="item.count"
+          :num="item.quantity+item.count"
           :price="item.product.price"
           :thumb="serverUrl+item.product.coverImg"
         />
         <!-- 商品卡片完 -->
       </van-checkbox>
       <ul class="steper">
-	      	<li v-for="item in goods" :key="item._id"><van-stepper v-model="item.count" /></li>
+	      	<li v-for="item in goods" :key="item._id">
+            <van-stepper v-model="item.count" />
+          </li>
 	      </ul>
     </van-checkbox-group>
     <!-- 复选框组完 -->
@@ -35,8 +38,22 @@
       @submit="onSubmit"
       >
     <div class="" @click="checkall"><van-checkbox v-model="allChecked" >全选</van-checkbox></div> 
+
     </van-submit-bar>
   </div>
+  <!--购物车为空-->
+    <div class="cart-empty" v-else>
+    	 <div class="cart-ico">
+    	 	 <i class="van-icon van-icon-cart"></i>
+    	 </div>
+    	 <p class="empty-warm">您的购物车空空如也...</p>
+    	 <router-link to="/">
+    	 	 <van-button size="small">去看看</van-button>
+    	 </router-link>
+    	 
+    </div>
+  
+</div> 
 </template>
 <script>
 import store from '../../vuex/store'
@@ -62,7 +79,8 @@ export default {
       goods: [],
       serverUrl,
       allChecked:false,
-      flag:true
+      flag:true,
+      value:1
     };
   },
   watch:{
@@ -76,7 +94,7 @@ export default {
 				this.allChecked=false
 			}
 			
-		}
+    }
   },
   	mounted(){
   	this.goods=this.selectGoods
@@ -95,7 +113,7 @@ export default {
     },
     totalPrice() {
       //有出现则累加，没有则为0
-       return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item._id) !== -1 ? (item.product.price*100)*item.count : 0), 0);
+       return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item._id) !== -1 ? (item.product.price*100)*(item.quantity + item.count) : 0), 0);
     },
     ...mapState({
       selectGoods: state => state.selectGoods//绑定store.selectGoods到组件，之后可用this.selectGoods获取
@@ -105,13 +123,14 @@ export default {
   },
 
   methods: {
-     checkall(){
-    	let arr=[]
+    checkall(){
+      let arr=[]
 			if(this.allChecked){
-					 this.selectGoods.forEach((item, index) => {
-			       arr.push(this.selectGoods[index].kid)
-			    });
-			    this.checkedGoods=arr
+        console.log(11)
+				this.selectGoods.forEach((item, index) => {
+			  arr.push(this.selectGoods[index]._id)
+			});
+			this.checkedGoods=arr
       }else{
       	this.checkedGoods=[]
       }
@@ -145,7 +164,7 @@ export default {
 
 <style scoped>
 .card-goods {
-  padding: 0.5rem 0.5rem;
+  padding:3.5rem 0.5rem 6rem 0.5rem;
   background-color: #fff;
 }
 
@@ -159,6 +178,7 @@ export default {
 .van-card__price {
   color: #f44;
 }
+
 .steper{
 				  position: absolute;
 					top: 0;
@@ -166,7 +186,7 @@ export default {
 }
 .steper li{
   height: 100px;
-					padding-bottom: 20px;
+					padding-bottom: 23px;
 					display: flex;
 					align-items: flex-end;
 }
@@ -202,6 +222,14 @@ export default {
 }
 .van-card__num{
   float:none;
+}
+.cart-empty{
+  margin: 290px auto;
+  text-align: center;
+}
+.cart-empty .van-icon{
+  color: #f44;
+  font-size: 2rem;
 }
 </style>
 

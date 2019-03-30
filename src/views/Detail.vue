@@ -84,7 +84,6 @@ export default {
       }
     },
   created(){
-    //get(`${serveUrl}/api/v1/products/${this.$route.params.id}`)
       getProductDetail(this.$route.params.id)
       .then(res=>{
         this.product = res.data;
@@ -106,9 +105,9 @@ export default {
       Toast('暂无后续逻辑~');
     },
     addshopCartHandle(product) {
-      if(sessionStorage.getItem('Admin-Token')) {
+      if(sessionStorage.getItem('token')) {
         // 调用加入购物车
-        alert(sessionStorage.getItem('Admin-Token'))
+        //alert(sessionStorage.getItem('token'))
         addToshopCart(product,1)
           .then(res => {
            /*  console.log(res)
@@ -126,7 +125,7 @@ export default {
         })
       }
 
-      // this.$eventBus.$emit('addToShopCartEnd')
+      this.$eventBus.$emit('addToShopCartEnd')
     },
     onClickLeft(){
       this.$router.push({

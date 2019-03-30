@@ -16,6 +16,7 @@
 
 <script>
 import {getShopCartCount}  from './services/users'
+import { isLogined } from './utils/auth.js'
 export default {
   data() {
     return {
@@ -38,9 +39,16 @@ export default {
           })
         break;
         case 2:
-          this.$router.push({
+          if(isLogined()){
+            this.$router.push({
             name: 'ShopCart'
           })
+          }else{
+            this.$router.push({
+              name:'Login'
+            })
+          }
+          
         break;
         case 3:
           this.$router.push({
