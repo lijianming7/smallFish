@@ -9,16 +9,16 @@
     </div>
    
    <van-cell-group>
-      <van-field v-model="userName" placeholder="请输入手机号码" />
+      <van-field v-model="userName" placeholder="请输入昵称" />
       <van-field
       v-model="sms"
     center
     clearable
-    placeholder="请输入短信验证码"
+    placeholder="请输入密码"
   >
     <van-button slot="button" size="small" type="primary" class="van">获取</van-button>
   </van-field>
-      <van-field v-model="repassword" type="password" placeholder="设置登录密码" />
+      <van-field v-model="repassword" type="password" placeholder="请确认输入密码" />
     </van-cell-group>
     <van-button @click="regHandle" class="btn-login" type="info" size="large" style="background:#d09b6b;border:0">同意协议并注册</van-button>
     <div class="zhece">注册即为同意《小鱼生鲜服务平台协议》</div>
