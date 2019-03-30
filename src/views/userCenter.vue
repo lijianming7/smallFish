@@ -171,7 +171,7 @@ router-link {
 
 }
 .card_list{
-  width: 8rem;
+  width: 30%;
   height:8rem;
   margin: 0.5rem 0;
   background:rgb(250, 246, 246);
