@@ -67,14 +67,17 @@ export default {
         .catch(err => {
           console.log(err)
         })
+        localStorage.setItem("name",this.userName);
+		    localStorage.setItem("uid","1");
     }
   }
 }
 </script>
 <style>
 .btn-login {
-  margin: 0.5rem 0;
-  border-radius: 20px;
+  margin: 0.5rem;
+  width:96%;
+  border-radius: 10px;
 }
 .daohang-1{
   margin-bottom: 50px;

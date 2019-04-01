@@ -14,12 +14,13 @@
     <van-cell @click='addresstHandle' title="我的地址" is-link />
     <van-cell title="通用" is-link />
     <van-cell title="隐私" is-link />
-    <van-cell title="注销账户" is-link />
+    <van-cell @click="loginOut" title="注销账户" is-link />
 </div>
 
 </template>
 
 <script>
+import { logOut } from '../utils/auth'
 export default {
   methods: {
     onClickLeft(){
@@ -35,6 +36,10 @@ export default {
         name:'AddressList'
       })
     },
+    loginOut(){
+      localStorage.removeItem("name","uid")
+      this.$router.push({name:'UserCenter'})
+    }
   }
 }
 </script>

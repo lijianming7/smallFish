@@ -18,39 +18,39 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
         <p>新鲜水果</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t2.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t2.jpg"></h5>
         <p>蔬菜净菜</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t3.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t3.jpg"></h5>
         <p>海鲜水产</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t4.png"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t4.png"></h5>
         <p>速冻牛肉</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t4.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t4.jpg"></h5>
         <p>越南火龙果</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t5.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t5.jpg"></h5>
         <p>进口山竹</p>
       </van-col>
        <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t6.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t6.jpg"></h5>
         <p>巴沙鱼柳</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t7.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t7.jpg"></h5>
         <p>A级鲜蛋</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t8.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t8.jpg"></h5>
         <p>越南火龙果</p>
       </van-col>
       <van-col span="6" type="flex" class="className">
-        <h5><img src="../assets/img/t9.jpg"></h5>
+        <h5><img @click='tofreshHandle' src="../assets/img/t9.jpg"></h5>
         <p>麒麟西瓜</p>
       </van-col>
     </van-row>
@@ -104,12 +104,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/hot01.jpg"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/v4Pn6NYliuGiaSF3i4mMIA.jpg_400w_400h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>精品榴莲</li>
+                <li>小龙坎随手杯</li>
                 <li>
-                  <i>￥42.80</i>
+                  <i>￥14.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -121,12 +121,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
         <van-swipe-item>
           <van-row type="flex" justify="space-between" class="hotItem_b">
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/X4RNhbhyS60J8E5s9aLdAw.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>阿根廷红虾</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥108.00</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -134,12 +134,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice1.suning.cn/uimg1/b2c/image/baVIAp4xQj3B1obRzR2t-w.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>越南火龙果</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥12.80</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -147,12 +147,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/laY6O9uFUDRyk9pJxJ3XDw.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>乳脂挞液</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥19.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -160,12 +160,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://image1.suning.cn/uimg/b2c/newcatentries/0070183716-000000010128147992_1.jpg_400w_400h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>八宝饭</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥24.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -191,12 +191,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
         <van-swipe-item>
           <van-row type="flex" justify="space-between" class="hotItem_b">
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/X4RNhbhyS60J8E5s9aLdAw.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li class="title">黄忠</li>
+                <li>阿根廷红虾</li>
                 <li>
-                  <i class="price">98K</i>
+                  <i>￥108.00</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -204,12 +204,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice1.suning.cn/uimg1/b2c/image/baVIAp4xQj3B1obRzR2t-w.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>越南火龙果</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥12.80</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -217,12 +217,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/laY6O9uFUDRyk9pJxJ3XDw.jpg_200w_200h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>乳脂挞液</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥19.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -230,12 +230,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://image1.suning.cn/uimg/b2c/newcatentries/0070183716-000000010128147992_1.jpg_400w_400h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>八宝饭</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥24.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -244,15 +244,15 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
             </van-col>
           </van-row>
         </van-swipe-item>
-        <van-swipe-item>
+            <van-swipe-item>
           <van-row type="flex" justify="space-between" class="hotItem_b">
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="../assets/img/hot01.jpg"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li class="title">冷冻榴莲肉</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥41.80</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -260,12 +260,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="../assets/img/hot02.jpg"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>进口金奇异果 </li>
                 <li>
-                  <i>98K</i>
+                  <i>￥47.80</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -273,12 +273,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="../assets/img/hot03.jpg"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>鲜食糯玉米</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥19.80</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>
@@ -286,12 +286,12 @@ location-o" style="height:1.5rem;width:1.5rem"><van-icon name="location-o" style
               </ul>
             </van-col>
             <van-col span="6" type="flex" class="hotItem_c">
-              <h5><img src="../assets/img/t1.png"></h5>
+              <h5><img src="https://imgservice2.suning.cn/uimg1/b2c/image/v4Pn6NYliuGiaSF3i4mMIA.jpg_400w_400h_4e"></h5>
               <ul>
                 <li><span>特卖</span></li>
-                <li>黄忠</li>
+                <li>小龙坎随手杯</li>
                 <li>
-                  <i>98K</i>
+                  <i>￥14.90</i>
                   <em>
                     <van-icon name="shopping-cart-o" style="font-size:1rem"/>
                   </em>

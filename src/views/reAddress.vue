@@ -7,6 +7,7 @@
         clearable
         placeholder="收货人"
       />
+      
 
       <van-field
         v-model="mobile"
@@ -71,7 +72,10 @@ export default {
           }
         })
         .then(res => {
-          Toast('已修改')
+          Toast('修改成功')
+          this.$router.push({
+            name:'AddressList'
+          })
         })
         .catch(err => {
           Toast('操作失败')
@@ -89,6 +93,9 @@ export default {
         })
         .then(res => {
           Toast('已删除')
+          this.$router.push({
+            name:'AddressList'
+          })
         })
         .catch(err => {
           Toast('操作失败')
@@ -132,8 +139,8 @@ export default {
     width: 95%;
   }
   .delbtn{
-    background-color:#fff;
-    color: #000;
+    background-color:#f00;
+    color: #fff;
     border-radius: 15px;
     margin: 5px 10px;
     width: 95%;

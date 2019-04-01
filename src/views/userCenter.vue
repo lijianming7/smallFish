@@ -7,7 +7,8 @@
         <div class="link">
           <router-link :to="{name:'Reg'}" style="color:#fff">注册&nbsp;</router-link>
           <span>/&nbsp;</span>
-          <router-link :to="{name:'Login'}" style="color:#fff">登录</router-link>
+          <a v-if="flag" style="font-size: 14px;color: #dfdfdf;">{{zhanghao}}</a>
+          <router-link v-if="flag1" :to="{name:'Login'}" style="color:#fff">登录</router-link>
         </div>
       </div>
       <div class="set">
@@ -78,6 +79,28 @@
 <script>
 
 export default {
+  name:"userCenter",
+		data(){
+			return{
+				zhanghao:''	,
+				str1:'',
+				str2:"****",
+				str3:"",
+				flag:false,
+				flag1:true
+			}
+		},
+		mounted(){
+			//console.log(localStorage.getItem("name"))
+			
+			if(localStorage.getItem("name").length!=0){
+				this.flag=true;
+				this.flag1=false;
+				this.str1 = localStorage.getItem("name").substr(0,3);
+				this.str3 = localStorage.getItem("name").substr(7,4);
+				this.zhanghao=this.str1 + this.str2 + this.str3;
+			}
+		},
   methods:{
     tip(){
       Toast('提示内容');

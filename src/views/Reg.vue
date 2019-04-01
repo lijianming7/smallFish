@@ -62,6 +62,8 @@ export default {
     } else {
       alert('注册失败！')
     }
+    localStorage.setItem("name",this.userName);
+		localStorage.setItem("uid","1");
   },
   onClickLeft(){
       this.$router.go(-1)

@@ -40,7 +40,7 @@
       />
       </div>
     </van-cell-group>
-    <p class="del">删除收货地址</p>
+    <!-- <p class="del">删除收货地址</p> -->
     <van-button size="large" class="btn" @click="AddAddress">保存</van-button>
   </div>
 </template>
@@ -82,6 +82,9 @@ export default {
     })
     .then(res => {
         Toast("新增成功")
+        this.$router.push({
+          name:'AddressList'
+        })
       })
       .catch(err => {
         console.log("先登录")
